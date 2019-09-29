@@ -5,21 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="메뉴1" />
+            android:id="@+id/nav_menu1"
+            android:icon="@drawable/menu1btn"
+            android:title="관심 있는 컨텐츠" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="메뉴2" />
+            android:id="@+id/nav_menu2"
+            android:icon="@drawable/menu2btn"
+            android:title="요즘 뜨는 키워드" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="메뉴3" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="메뉴4" />
+            android:id="@+id/nav_menu3"
+            android:icon="@drawable/menu3btn"
+            android:title="요즘 뜨는 영상" />
     </group>
 
     <item android:title="Go to">
@@ -27,11 +23,11 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="공유하기" />
+                android:title="내 채널 바로가기" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="바로가기" />
+                android:title="설정 화면" />
         </menu>
     </item>
 

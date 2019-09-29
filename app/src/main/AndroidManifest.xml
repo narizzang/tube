@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ha.tube">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,6 +28,9 @@
         <activity
             android:name=".ViewerActivity"
             android:label="@string/title_activity_viewer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".YoutuberActivity"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
