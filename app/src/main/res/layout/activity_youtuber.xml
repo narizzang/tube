@@ -41,8 +41,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        app:layout_anchor="@id/video_list"
+        app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
         app:srcCompat="@drawable/shortcutbtn" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/video_list"
+        app:layout_anchorGravity="bottom|center"
+        app:srcCompat="@drawable/backbtn" />
 
 </android.support.design.widget.CoordinatorLayout>

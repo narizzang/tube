@@ -1,6 +1,7 @@
 package com.example.ha.tube;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -21,7 +22,9 @@ public class CreatorActivity extends AppCompatActivity
     private FragmentManager fragmentManager;
     private C1Fragment frag1;
     private C2Fragment frag2;
+    private C4Fragment frag4;
     private FragmentTransaction transaction;
+    String channel_id = "user/KonkukUniv";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +58,7 @@ public class CreatorActivity extends AppCompatActivity
         fragmentManager = getSupportFragmentManager();
         frag1 = new C1Fragment();
         frag2 = new C2Fragment();
+        frag4 = new C4Fragment();
     }
 
     @Override
@@ -95,11 +99,22 @@ public class CreatorActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         transaction = fragmentManager.beginTransaction();
-        if (id == R.id.nav_menu1) {
-            transaction.replace(R.id.frameLayout, frag1).commitAllowingStateLoss();
-        } else if (id == R.id.nav_menu2) {
-            transaction.replace(R.id.frameLayout, frag2).commitAllowingStateLoss();
+        switch(id) {
+            case R.id.nav_menu1:
+                transaction.replace(R.id.cframelayout, frag1).commitAllowingStateLoss();
+                break;
+            case R.id.nav_menu2:
+                transaction.replace(R.id.cframelayout, frag2).commitAllowingStateLoss();
+                break;
+            case R.id.nav_channel:
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/" + channel_id));
+                startActivity(intent);
+                break;
+            case R.id.nav_setting:
+                transaction.replace(R.id.cframelayout, frag4).commitAllowingStateLoss();
+                break;
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

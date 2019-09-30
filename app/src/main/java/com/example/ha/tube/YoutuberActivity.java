@@ -26,11 +26,20 @@ public class YoutuberActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.shortcutBtn);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fab1 = (FloatingActionButton) findViewById(R.id.shortcutBtn);
+        fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gotoYoutubeApp("UCeivPjjK9-cdj8-gw4-7JRg");
+            }
+        });
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.backBtn);
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(YoutuberActivity.this, MainActivity.class));
+                overridePendingTransition(R.anim.anim_slide_in_right, R.anim.anim_slide_out_left);
+                finish();
             }
         });
         init();
@@ -38,25 +47,27 @@ public class YoutuberActivity extends AppCompatActivity {
 
     private void init() {
         list = new ArrayList<VideoItem>();
-        VideoItem[] v =  new VideoItem[8];
-        v[0] = new VideoItem("https://i.ytimg.com/vi/Gfuecp7pnbQ/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDDcWukeVrIRGQFRdf4c42BDnILQg",
-        "문호준 인 걸 모르고 「아이디 삭제빵 뜨자고 온 유저」ㅋㅋㅋㅋㅋㅋㅋㅋ [카트 문호", "346만회", "Gfuecp7pnbQ");
-        v[1] = new VideoItem("https://i.ytimg.com/vi/nG5y9vSLKBY/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLALYBXNSZoWAJLHvOioQuydCyuGeg",
-                "카트라이더 30초 핵을 이겨버린 문호준(feat.15초 핵)ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ [카트 문호준]", "285만회", "Gfuecp7pnbQ");
-        v[2] = new VideoItem("https://i.ytimg.com/vi/T4r0J8xqQLM/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAP7mjP2pS7ZAjGb7ReB2CFfOeabQ",
-                "「카트 스피드 핵 VS 문호준」ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ [카트 문호준]", "241만회", "Gfuecp7pnbQ");
-        v[3] = new VideoItem("https://i.ytimg.com/vi/oOzQrRJzPMU/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCimfH1d1K5F8QM8hYcWGyCu5lqXQ",
-                "카트 떡상 기념! 「문호준의 카트 잘하는 법 완벽 강좌!」 [카트 문호준]", "212만회", "Gfuecp7pnbQ");
-        v[4] = new VideoItem("https://i.ytimg.com/vi/7A_QxwAC_eQ/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAOQy3xfyVK2a7fBOChM7y57f7kGg",
-                "1 대 1 모드에서 유영혁을 만난 문호준ㅋㅋㅋㅋㅋㅋㅋㅋㅋ [카트 문호준]", "193만회", "Gfuecp7pnbQ");
-        v[5] = new VideoItem("https://i.ytimg.com/vi/7A_QxwAC_eQ/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAOQy3xfyVK2a7fBOChM7y57f7kGg",
-                "1 대 1 모드에서 유영혁을 만난 문호준ㅋㅋㅋㅋㅋㅋㅋㅋㅋ [카트 문호준]", "193만회", "Gfuecp7pnbQ");
-        v[6] = new VideoItem("https://i.ytimg.com/vi/7A_QxwAC_eQ/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAOQy3xfyVK2a7fBOChM7y57f7kGg",
-                "1 대 1 모드에서 유영혁을 만난 문호준ㅋㅋㅋㅋㅋㅋㅋㅋㅋ [카트 문호준]", "193만회", "Gfuecp7pnbQ");
-        v[7] = new VideoItem("https://i.ytimg.com/vi/7A_QxwAC_eQ/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAOQy3xfyVK2a7fBOChM7y57f7kGg",
-                "1 대 1 모드에서 유영혁을 만난 문호준ㅋㅋㅋㅋㅋㅋㅋㅋㅋ [카트 문호준]", "193만회", "Gfuecp7pnbQ");
+        VideoItem[] v =  new VideoItem[9];
+        v[0] = new VideoItem("https://i.ytimg.com/vi/kIUD_0ytG34/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAtBoBc3CC1rBCDVQItlQfJDjMDJg",
+        "[건국대학교 Konkuk University] 학생 홍보영상 Promotional Video (for prospective students)", "33,275회", "kIUD_0ytG34");
+        v[1] = new VideoItem("https://i.ytimg.com/vi/AaKDBm_d9bI/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLB8X2PjERbg_GjTa8Uk_SfeNq953w",
+                "[건국대/영상공모전 대상] 나에게 건국이란~ \"세상에 필요한 진짜 공부\"", "11,515회", "Gfuecp7pnbQ");
+        v[2] = new VideoItem("https://i.ytimg.com/vi/V18iJOcNfuo/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCLxnPsWEZ8515ybR52h_eRAkXDlA",
+                "[전지적 전공 시점 ] 건국대 수의대 학생이 밝히는 수의대의 진실??", "19,548회", "Gfuecp7pnbQ");
+        v[3] = new VideoItem("https://i.ytimg.com/vi/Z2QbxSkQUYM/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLChCIe5Z05zE00L_jZu5JpgX0Patw",
+                "건국대 홍보대사 '건우건희' 일상 브이로그. 건국대 미디어커뮤니케이션학과", "15,089회", "Gfuecp7pnbQ");
+        v[4] = new VideoItem("https://i.ytimg.com/vi/Xlsj8hdx1XU/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCRldjsTx7SP8ergPEWbvw4BQ-5kg",
+                "[건국대/캠퍼스투어] 함께 걸을까? 건국대 캠퍼스투어", "13,981회", "Gfuecp7pnbQ");
+        v[5] = new VideoItem("https://i.ytimg.com/vi/ViEOO0dBl_M/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLB46U6CeYB4I7nk94Xepahu8aaOUQ",
+                "\"젊음으로 새 도약\" 23만 건국의 자부심 건국대 총동문회", "12,515회", "Gfuecp7pnbQ");
+        v[6] = new VideoItem("https://i.ytimg.com/vi/3wZCHDFUzh4/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBy4cReVngOUwnrPdGqcugyj5sFHw",
+                "건국대 공대생의 브이로그", "8,508회", "Gfuecp7pnbQ");
+        v[7] = new VideoItem("https://i.ytimg.com/vi/WPHw0WLDm28/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBn_l1Y0ac1V6FmCijbaR72xDopIw",
+                "[전지적 전공 시점 4편] 건국대 미디어커뮤니케이션학과 + 문화콘텐츠학과", "6,815회", "Gfuecp7pnbQ");
+        v[8] = new VideoItem("https://i.ytimg.com/vi/nLj2boMqO5M/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCnhPSqB7HJwmrzHarzsvktHsk1xA",
+                "입학사정관이 알려주는 2020 건국대 학종의 모든것", "2,273회", "Gfuecp7pnbQ");
 
-        for (int i=0; i<8; i++) {
+        for (int i=0; i<9; i++) {
             list.add(v[i]);
         }
 

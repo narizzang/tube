@@ -5,10 +5,12 @@
     tools:context="com.example.ha.tube.C2Fragment"
     android:background="@color/color3">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="frag2222222222222222222222222222" />
+        android:gravity="center"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:text="데이터 마이닝 성공 후\nDB와 연결 예정" />
 
 </FrameLayout>
