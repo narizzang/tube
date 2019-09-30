@@ -21,12 +21,12 @@
     <item android:title="Go to">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
+                android:id="@+id/nav_channel"
+                android:icon="@drawable/channelbtn"
                 android:title="내 채널 바로가기" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/settingbtn"
                 android:title="설정 화면" />
         </menu>
     </item>
