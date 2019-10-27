@@ -94,7 +94,7 @@ public class ViewerActivity extends AppCompatActivity
         transaction = fragmentManager.beginTransaction();
         switch(id) {
             case R.id.nav_menu1:
-                transaction.replace(R.id.cframelayout, frag1).commitAllowingStateLoss();
+                transaction.replace(R.id.vframelayout, frag1).commitAllowingStateLoss();
                 break;
             case R.id.nav_menu2:
                 break;
