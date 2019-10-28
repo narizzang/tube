@@ -19,7 +19,7 @@ public class ViewerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private FragmentManager fragmentManager;
     private V1Fragment frag1;
-//    private V2Fragment frag2;
+    private V2Fragment frag2;
     private FragmentTransaction transaction;
 
     @Override
@@ -52,6 +52,7 @@ public class ViewerActivity extends AppCompatActivity
     private void init() {
         fragmentManager = getSupportFragmentManager();
         frag1 = new V1Fragment();
+        frag2 = new V2Fragment();
     }
 
     @Override
@@ -97,6 +98,7 @@ public class ViewerActivity extends AppCompatActivity
                 transaction.replace(R.id.vframelayout, frag1).commitAllowingStateLoss();
                 break;
             case R.id.nav_menu2:
+                transaction.replace(R.id.vframelayout, frag2).commitAllowingStateLoss();
                 break;
             case R.id.nav_channel:
                 break;
