@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_menu1"
             android:icon="@drawable/menu1btn"
-            android:title="즐겨찾는 채널" />
+            android:title="즐겨보는 컨텐츠" />
         <item
             android:id="@+id/nav_menu2"
             android:icon="@drawable/menu2btn"
@@ -15,7 +15,7 @@
         <item
             android:id="@+id/nav_menu3"
             android:icon="@drawable/menu3btn"
-            android:title="추천 채널" />
+            android:title="추천 유튜버" />
     </group>
 
     <item android:title="Settings">

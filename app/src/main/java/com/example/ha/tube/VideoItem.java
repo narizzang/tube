@@ -7,6 +7,15 @@ public class VideoItem {
         this.title = t;
         this.views = v;
         this.videoId = id;
+        this.likes = 0;
+    }
+
+    public VideoItem(String u, String t, String v, String id, int i) {
+        this.thumbnailUrl = u;
+        this.title = t;
+        this.views = v;
+        this.videoId = id;
+        this.likes = i;
     }
 
     public String getThumbnailUrl() {
@@ -21,6 +30,7 @@ public class VideoItem {
     String videoId;
     String title;
     String views;
+    int likes;
 
     public String getVideoId() {
         return videoId;
@@ -40,6 +50,10 @@ public class VideoItem {
 
     public String getViews() {
         return views;
+    }
+
+    public String getLikes() {
+        return "좋아요 "+likes+"회";
     }
 
     public void setViews(String views) {
