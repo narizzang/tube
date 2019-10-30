@@ -22,6 +22,7 @@ public class CreatorActivity extends AppCompatActivity
     private FragmentManager fragmentManager;
     private C1Fragment frag1;
     private C2Fragment frag2;
+    private C3Fragment frag3;
     private C4Fragment frag4;
     private FragmentTransaction transaction;
     String channel_id = "user/KonkukUniv";
@@ -58,6 +59,7 @@ public class CreatorActivity extends AppCompatActivity
         fragmentManager = getSupportFragmentManager();
         frag1 = new C1Fragment();
         frag2 = new C2Fragment();
+        frag3 = new C3Fragment();
         frag4 = new C4Fragment();
     }
 
@@ -105,6 +107,9 @@ public class CreatorActivity extends AppCompatActivity
                 break;
             case R.id.nav_menu2:
                 transaction.replace(R.id.cframelayout, frag2).commitAllowingStateLoss();
+                break;
+            case R.id.nav_menu3:
+                transaction.replace(R.id.cframelayout, frag3).commitAllowingStateLoss();
                 break;
             case R.id.nav_channel:
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/" + channel_id));

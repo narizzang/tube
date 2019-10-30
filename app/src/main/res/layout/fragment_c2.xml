@@ -5,12 +5,40 @@
     tools:context="com.example.ha.tube.C2Fragment"
     android:background="@color/color3">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="28sp"
-        android:textColor="#FFFFFF"
-        android:text="데이터 마이닝 성공 후\nDB와 연결 예정" />
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:textColor="#FFFFFF"
+            android:text="요즘 뜨는 키워드" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"
+            android:text="설정한 나의 관심 컨텐츠들을 분석해서 그 컨텐츠들에 대해\n요즘 뜨는 영상 키워드들을 추천해줍니다" />
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:layout_gravity="center"
+            android:id="@+id/keywordChart">
+        </com.github.mikephil.charting.charts.PieChart>
+
+    </LinearLayout>
 
 </FrameLayout>

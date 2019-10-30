@@ -29,24 +29,27 @@ public class C1Fragment extends Fragment {
         // Required empty public constructor
     }
 
+    public void itemAdd() {
+        contents.add(new Contents("브이로그"));
+        contents.add(new Contents("일상"));
+        contents.add(new Contents("반려동물"));
+        contents.add(new Contents("영화"));
+        contents.add(new Contents("음악"));
+        contents.add(new Contents("동물"));
+        contents.add(new Contents("카트라이더"));
+        contents.add(new Contents("마인크래프트"));
+        //contents.get(2).setCheck(true);
+        //contents.get(5).setCheck(true);
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_c1, container, false);
         contents = new ArrayList<Contents>();
-        contents.add(new Contents("브이로그"));
-        contents.add(new Contents("일상"));
-        contents.add(new Contents("요리"));
-        contents.add(new Contents("영화"));
-        contents.add(new Contents("음악"));
-        contents.add(new Contents("게임"));
-        contents.add(new Contents("카트라이더"));
-        contents.add(new Contents("마인크래프트"));
-        contents.get(2).setCheck(true);
-        contents.get(5).setCheck(true);
-        contents.get(6).setCheck(true);
-        contents.get(7).setCheck(true);
+        itemAdd();
+
         adapter = new ContentsAdapter(getContext(), R.layout.contents_item, contents);
         list = view.findViewById(R.id.contentsList);
         list.setAdapter(adapter);

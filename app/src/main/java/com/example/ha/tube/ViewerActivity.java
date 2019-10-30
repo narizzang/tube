@@ -20,6 +20,7 @@ public class ViewerActivity extends AppCompatActivity
     private FragmentManager fragmentManager;
     private V1Fragment frag1;
     private V2Fragment frag2;
+    private V3Fragment frag3;
     private FragmentTransaction transaction;
 
     @Override
@@ -33,7 +34,7 @@ public class ViewerActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ViewerActivity.this, YoutuberActivity.class));
+                startActivity(new Intent(ViewerActivity.this, MainActivity.class));
                 overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_out_right);
                 finish();
             }
@@ -53,6 +54,7 @@ public class ViewerActivity extends AppCompatActivity
         fragmentManager = getSupportFragmentManager();
         frag1 = new V1Fragment();
         frag2 = new V2Fragment();
+        frag3 = new V3Fragment();
     }
 
     @Override
@@ -99,6 +101,9 @@ public class ViewerActivity extends AppCompatActivity
                 break;
             case R.id.nav_menu2:
                 transaction.replace(R.id.vframelayout, frag2).commitAllowingStateLoss();
+                break;
+            case R.id.nav_menu3:
+                transaction.replace(R.id.vframelayout, frag3).commitAllowingStateLoss();
                 break;
             case R.id.nav_channel:
                 break;

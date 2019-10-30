@@ -37,14 +37,14 @@ public class V1Fragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_v1, container, false);
         contents = new ArrayList<Contents>();
-        contents.add(new Contents("건국대학교"));
-        contents.add(new Contents("게임"));
-        contents.add(new Contents("롤드컵"));
-        contents.add(new Contents("메이플스토리"));
-        contents.add(new Contents("배틀그라운드"));
-        contents.add(new Contents("카트라이더"));
-        contents.add(new Contents("LOL"));
-        contents.add(new Contents("마인크래프트"));
+        contents.add(new Contents("브이로그"));
+        contents.add(new Contents("일상"));
+        contents.add(new Contents("반려동물"));
+        contents.add(new Contents("강아지"));
+        contents.add(new Contents("개"));
+        contents.add(new Contents("고슴도치"));
+        contents.add(new Contents("고양이"));
+        contents.add(new Contents("웰시코기"));
         contents.get(2).setCheck(true);
         contents.get(5).setCheck(true);
         contents.get(6).setCheck(true);

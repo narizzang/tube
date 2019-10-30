@@ -7,10 +7,10 @@ public class VideoItem {
         this.title = t;
         this.views = v;
         this.videoId = id;
-        this.likes = 0;
+        this.likes = "0";
     }
 
-    public VideoItem(String u, String t, String v, String id, int i) {
+    public VideoItem(String u, String t, String v, String id, String i) {
         this.thumbnailUrl = u;
         this.title = t;
         this.views = v;
@@ -30,7 +30,7 @@ public class VideoItem {
     String videoId;
     String title;
     String views;
-    int likes;
+    String likes;
 
     public String getVideoId() {
         return videoId;
